@@ -103,11 +103,15 @@ a = deque(input('Первое слагаемое: '))  # делала со сп�
 b = deque(input('Второе слагаемое: '))
 #print(a, b, sep='\n')
 if len(a) < len(b):
-    while len(a) < len(b):
+    while len(a) < len(b) + 1:
         a.appendleft('0')  # вставляла через insert(0, '0')
-else:
     while len(b) < len(a):
         b.appendleft('0')
+else:
+    while len(b) < len(a) + 1:
+        b.appendleft('0')
+    while len(a) < len(b):
+        a.appendleft('0')
 #print(a, b, sep='\n')
 
 a = to_num(a)
