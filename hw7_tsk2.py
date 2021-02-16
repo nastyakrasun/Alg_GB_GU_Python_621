@@ -9,13 +9,6 @@ import random
 
 SIZE = 15
 
-array = []
-for i in range(SIZE):
-    array.append(random.randint(0, 50))
-print('Исходный массив: ', array)
-
-#array2 = [10, 15, 2, 4, 7, 8, 16, 24, 29, 3, 35]
-
 def merge_sort(data):
     if len(data) < 2:
         return data
@@ -42,5 +35,11 @@ def merge_sort(data):
 
         return result
 
+array = []
+for i in range(SIZE):
+    array.append(random.randint(0, 50))
+print('Исходный массив: ', array)
+
+#array2 = [10, 15, 2, 4, 7, 8, 16, 24, 29, 3, 35]  # пробный массив
+
 print('Отсортированный массив: ', merge_sort(array))
-#print(merge_sort(array2))

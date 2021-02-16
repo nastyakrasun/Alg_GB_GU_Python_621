@@ -18,7 +18,6 @@ def bubble1_conv_sort(data):  # алгоритм сортировки в вид�
             if data[i] < data[i+1]:
                 data[i], data[i + 1] = data[i + 1], data[i]
         spam += 1
-        #print(data)
 
 def bubble2_conv_sort(data):  # изменённый алгоритм для сортировки пузырьком
     # (прочла про сортировку шейкером и расческой, поняла что это)
@@ -26,7 +25,6 @@ def bubble2_conv_sort(data):  # изменённый алгоритм для с�
         for i in range(len(data) - k - 1):
             if data[i] < data[i+1]:
                 data[i], data[i + 1] = data[i + 1], data[i]
-        #print(data)
 
 def bubble3_conv_sort(data):  # ещё 1 вариант
     for k in range(len(data) - 1):
@@ -35,18 +33,20 @@ def bubble3_conv_sort(data):  # ещё 1 вариант
                 spam = array[i]
                 data[i] = data[i+1]
                 data[i + 1] = spam
-        #print(data)
 
 array = [i for i in range(-100, 100)]  # range(MIN_VAL, MAX_VAL) при заранее заданных MIN_VAL, MAX_VAL
 array == random.shuffle(array)
+print('Исходный массив: ', array)
 
 #array = [-9, 4, 1, 2, -10, -2, 9, -3, 7, -4, 5, 3, -8, -6, -7, 0, 6, 8, -5, -1]  # пробный массив
 
 bubble1_conv_sort(array)
 print('отсортированный массив, вариант 1: ',array, sep='\n')
 array == random.shuffle(array)
+print('Исходный массив: ', array)
 bubble2_conv_sort(array)
 print('отсортированный массив, вариант 2: ',array, sep='\n')
 array == random.shuffle(array)
+print('Исходный массив: ', array)
 bubble3_conv_sort(array)
 print('отсортированный массив, вариант 3: ',array, sep='\n')
