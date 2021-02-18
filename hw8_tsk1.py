@@ -24,7 +24,7 @@ def func(str_):
                 hash_.append(new_hash)
                 subs.append(str_[i:i+len_sub])
 
-    return f'{len(subs)} различных подстрок в строке {str_}'
+    return len(subs)
 
 print('Определение количества различных подстрок с использованием хеш-функции.')
 a = input('Введите строку: ')
